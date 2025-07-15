@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>🛍️ Inventory Pro</h1>
+            <p class="tagline">Manage your items with ease</p>
+        </header>
+
+        <main class="app-content">
+            <section class="item-form-section">
+                <div class="form-card">
+                    <h2 id="form-title">Add New Item</h2>
+                    <form id="itemForm">
+                        <input type="hidden" id="itemId">
+                        <div class="input-group">
+                            <label for="name">Item Name</label>
+                            <input type="text" id="name" placeholder="Enter item name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" placeholder="Enter description (optional)">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" id="submit-btn" class="primary-btn">➕ Add Item</button>
+                            <button type="button" id="cancel-btn" class="secondary-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="item-list-section">
+                <div class="list-card">
+                    <div class="list-header">
+                        <h2>Your Inventory</h2>
+                        <div id="message" class="status-message"></div>
+                    </div>
+                    <ul id="itemsList" class="item-list"></ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2023 Inventory Management System</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
